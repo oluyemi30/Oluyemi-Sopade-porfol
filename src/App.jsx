@@ -9,8 +9,6 @@ import CaseStudyDetail from './pages/CaseStudyDetail';
 import Playground from './pages/Playground';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
-import Writing from './pages/Writing';
-import Now from './pages/Now';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,7 +24,7 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen flex flex-col relative bg-[var(--bg)] text-[var(--text)]">
+    <div className="min-h-screen flex flex-col relative">
       {/* Fractal Paper Noise Texture Overlay */}
       <div aria-hidden="true" className="ca-grain pointer-events-none fixed inset-0 z-[1] mix-blend-multiply" />
 
@@ -54,8 +52,6 @@ export default function App() {
               <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
               <Route path="/playground" element={<Playground />} />
               <Route path="/resume" element={<Resume />} />
-              <Route path="/writing" element={<Writing />} />
-              <Route path="/now" element={<Now />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<Home />} />
             </Routes>
